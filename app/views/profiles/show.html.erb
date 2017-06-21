@@ -26,11 +26,15 @@
 <div class="grow">
   <h3>My Lists</h3>
   <ol>
-    <% @recipe.each do |recipe| %>
+    <%if @recipes != nil%>
+    <% @recipes.each do |recipe| %>
       <li>
         <%= link_to "#{recipe.title}", recipe_path(recipe) %>
       </li>
-    <%end%>
+      <%end%>
+    <% else %>
+    <%= "Nothing added" %>
+    <% end %>
   </ol>
 </div>
 

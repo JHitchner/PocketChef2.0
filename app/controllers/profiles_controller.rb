@@ -1,7 +1,4 @@
 class ProfilesController < ApplicationController
-  def index
-
-  end
   def new
     @profile = Profile.new
   end
@@ -17,19 +14,19 @@ class ProfilesController < ApplicationController
   end
 
   def show
+    @recipes = Recipe.all
     if(Profile.exists?(current_user.id))
       @profile = Profile.find(params[:id])
     else redirect_to new_profile_path
     end
-    #  @profile = Profile.find(params[:id])
-     @recipe = Recipe.all
-     @apiPath = 'https://api.edamam.com/search?q='
-     @appId = ENV['RECIPE_APP_ID']
-     @apiKey = ENV['RECIPE_API_KEY']
+    # @recipe = Recipe.find(params[:user_id])
+    @apiPath = 'https://api.edamam.com/search?q='
+    @appId = ENV['RECIPE_APP_ID']
+    @apiKey = ENV['RECIPE_API_KEY']
+    @recipe_pref =  params[:preference]
+    @response = HTTParty.get(@apiPath.to_s + "" + @recipe_pref.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s + "&from=0" + "&to=5")
+    @recipeResponse = JSON.parse(@response.body)
 
-     @response = HTTParty.get(@apiPath.to_s + "" + @recipe_pref.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s + "&from=0" + "&to=5")
-     @recipeResponse = JSON.parse(@response.body)
-     @recipe_pref = params[:search] || params[:preference]
   end
 
 
