@@ -5,7 +5,15 @@
   </p>
   <p>
   <li id="recipe_ingredients">
-    <%= @recipe.ingredients %>
+    <ol>
+    <% @boop = @recipe.ingredients.scan(/"[^"]*"|'[^']*'|[^"'\s\W]+/) %>
+    <% @boop.each do |woo| %>
+
+        <li>
+    <%=  woo.to_s.gsub('"','' )%>
+  </li>
+    <% end %>
+  </ol>
   </li>
   </p>
 </div>

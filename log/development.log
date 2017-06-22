@@ -3409,3 +3409,729 @@ Processing by ProfilesController#show as HTML
 Completed 200 OK in 917ms (Views: 62.1ms | ActiveRecord: 3.4ms)
 
 
+Started GET "/recipes?search=Pomegranate+Poached+Pears" for 127.0.0.1 at 2017-06-22 13:29:05 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"search"=>"Pomegranate Poached Pears"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 334ms (Views: 27.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2017-06-22 13:29:13 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z5XfvOkEzzVL8UWZ07rioHT2n19L4LX2BWAhyEsD698NCI7zn5Q9Rjbmjf2hIAQ4mcTxnyzHTr3h7ubeyFk8Bw==", "recipe"=>{"title"=>"Pomegranate Poached Pears", "ingredients"=>"[\"4 medium pear, bosc, ripe, firm\", \"1 1/2 cup(s) pomegranate juice\", \"1 cup(s) wine, dessert, such as muscatel or riesling\", \"2 tablespoon nuts, almonds, sliced\", \"1/2 cup(s) seeds, pomegranate, (from 1/2 large fruit)\", \"4 tablespoon sour cream, reduced-fat, or low-fat plain yogurt\", \"4 whole bay leaves, fresh or dried, for garnish\"]"}, "commit"=>"Make List"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "recipes" ("created_at", "updated_at", "title", "ingredients") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-06-22 17:29:13.422553"], ["updated_at", "2017-06-22 17:29:13.422553"], ["title", "Pomegranate Poached Pears"], ["ingredients", "[\"4 medium pear, bosc, ripe, firm\", \"1 1/2 cup(s) pomegranate juice\", \"1 cup(s) wine, dessert, such as muscatel or riesling\", \"2 tablespoon nuts, almonds, sliced\", \"1/2 cup(s) seeds, pomegranate, (from 1/2 large fruit)\", \"4 tablespoon sour cream, reduced-fat, or low-fat plain yogurt\", \"4 whole bay leaves, fresh or dried, for garnish\"]"]]
+  [1m[35m (170.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "recipes" SET "updated_at" = ?, "user_id" = ? WHERE "recipes"."id" = ?[0m  [["updated_at", "2017-06-22 17:29:13.601656"], ["user_id", 1], ["id", 11]]
+  [1m[35m (68.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/profiles/1
+Completed 302 Found in 254ms (ActiveRecord: 241.4ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2017-06-22 13:29:13 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered profiles/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 700ms (Views: 30.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes?search=Pomegranate+Poached+Pears" for 127.0.0.1 at 2017-06-22 13:29:30 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"search"=>"Pomegranate Poached Pears"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 322ms (Views: 41.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2017-06-22 13:29:44 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (1.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered profiles/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 1064ms (Views: 31.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/recipes/11" for 127.0.0.1 at 2017-06-22 13:29:48 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 58ms (Views: 46.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/11" for 127.0.0.1 at 2017-06-22 13:37:00 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `[]' for nil:NilClass):
+    12: <div class="searchImages">
+    13:   <span>
+    14:     <%= form_for(:recipe, url: recipes_path, :class => "form") do |f| %>
+    15:       <% @recipeResponse["hits"].each do |response| %>
+    16:         <span id="imageResponseRecipe">
+    17:           <% @image = response["recipe"]["image"] %>
+    18:           <%= image_tag(@image) %>
+  
+app/views/recipes/show.html.erb:15:in `block in _app_views_recipes_show_html_erb___3998422503863916437_70343581421500'
+app/views/recipes/show.html.erb:14:in `_app_views_recipes_show_html_erb___3998422503863916437_70343581421500'
+Started GET "/recipes/11" for 127.0.0.1 at 2017-06-22 13:37:49 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: 
+    2: <!-- <div class="recipe_list">
+    3:   <p id="recipeTitleShow">
+    4:     <%= @recipe.title%>
+    5:   </p>
+    6:   <p>
+    7:   <li id="recipe_ingredients">
+  
+app/views/recipes/show.html.erb:4:in `_app_views_recipes_show_html_erb___3998422503863916437_70343412204900'
+Started GET "/recipes/11" for 127.0.0.1 at 2017-06-22 13:38:27 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (34.0ms)
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: 
+    2: <!-- <div class="recipe_list">
+    3:   <p id="recipeTitleShow">
+    4:     <%= @recipe.title%>
+    5:   </p>
+    6:   <p>
+    7:   <li id="recipe_ingredients">
+  
+app/views/recipes/show.html.erb:4:in `_app_views_recipes_show_html_erb___3998422503863916437_70343587635880'
+Started GET "/recipes/11" for 127.0.0.1 at 2017-06-22 13:38:41 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 464ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    22:     </span>
+    23: </div>
+    24: <p id="showLinks">
+    25:   <%=link_to "Delete List", recipe_path(@recipe.id),:method => :delete, :id => "editList"%>
+    26: </p>
+  
+app/views/recipes/show.html.erb:25:in `_app_views_recipes_show_html_erb___3998422503863916437_70343531604200'
+Started GET "/recipes/11" for 127.0.0.1 at 2017-06-22 13:38:53 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 263ms (Views: 38.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-22 13:38:56 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 1521ms (Views: 26.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes?search=Chicken+Piccata" for 127.0.0.1 at 2017-06-22 13:39:00 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"search"=>"Chicken Piccata"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 1506ms (Views: 31.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes?search=Chicken+Piccata" for 127.0.0.1 at 2017-06-22 13:39:05 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"search"=>"Chicken Piccata"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 1349ms (Views: 30.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes?search=Chicken+Piccata" for 127.0.0.1 at 2017-06-22 13:39:10 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"search"=>"Chicken Piccata"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 2314ms (Views: 17.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes?search=Chicken+Piccata" for 127.0.0.1 at 2017-06-22 13:39:27 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"search"=>"Chicken Piccata"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 1011ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"recipes", :search=>"Chicken Piccata"}):
+    36:       </p>
+    37:       <p id="imageSize">
+    38:         <% @image = response["recipe"]["image"] %>
+    39:         <%= link_to image_tag(@image), {:controller => "recipes", :action => "show", :search => response["recipe"]["label"]} %>
+    40:       </p>
+    41:     </span>
+    42: <%end%>
+  
+app/views/recipes/index.html.erb:39:in `block in _app_views_recipes_index_html_erb__4303993705404270174_70343583816240'
+app/views/recipes/index.html.erb:32:in `each'
+app/views/recipes/index.html.erb:32:in `_app_views_recipes_index_html_erb__4303993705404270174_70343583816240'
+Started GET "/recipes?search=Chicken+Piccata" for 127.0.0.1 at 2017-06-22 13:40:32 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"search"=>"Chicken Piccata"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 977ms (Views: 27.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2017-06-22 13:41:04 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uvNnmISz6HiaTRzjUHWTaJ/ZC8vILSL7WP9QaLax1FN4bjbX8iMaC+da1Ici73XwcutlC68K2bC8cZd+NesDiw==", "recipe"=>{"title"=>"Chicken Piccata", "ingredients"=>"[\"Two large chicken breasts\", \"¼ cup flour\", \"Salt and pepper\", \"2 tbsp. olive oil\", \"3 tbsp. butter\", \"3 tbsp. dry white wine\", \"3 tbsp. lemon juice\", \"2 tbsp. capers, rinsed and drained\", \"1 tbsp. parsley, chopped\"]"}, "commit"=>"Make List"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "recipes" ("created_at", "updated_at", "title", "ingredients") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-06-22 17:41:04.804150"], ["updated_at", "2017-06-22 17:41:04.804150"], ["title", "Chicken Piccata"], ["ingredients", "[\"Two large chicken breasts\", \"¼ cup flour\", \"Salt and pepper\", \"2 tbsp. olive oil\", \"3 tbsp. butter\", \"3 tbsp. dry white wine\", \"3 tbsp. lemon juice\", \"2 tbsp. capers, rinsed and drained\", \"1 tbsp. parsley, chopped\"]"]]
+  [1m[35m (136.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "recipes" SET "updated_at" = ?, "user_id" = ? WHERE "recipes"."id" = ?[0m  [["updated_at", "2017-06-22 17:41:04.944355"], ["user_id", 1], ["id", 12]]
+  [1m[35m (64.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/profiles/1
+Completed 302 Found in 244ms (ActiveRecord: 203.9ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2017-06-22 13:41:05 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered profiles/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 839ms (Views: 24.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:41:10 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 264ms (Views: 54.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:41:35 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 233ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: 
+    2: <div class="recipe_list">
+    3:   <p id="recipeTitleShow">
+    4:     <%= @recipe.title%>
+    5:   </p>
+    6:   <p>
+    7:   <li id="recipe_ingredients">
+  
+app/views/recipes/show.html.erb:4:in `_app_views_recipes_show_html_erb___3998422503863916437_70343518722820'
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:42:01 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 31ms (Views: 10.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:43:01 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 24.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:44:00 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.2ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/show.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/stormy/Desktop/PocketChef2/app/views/recipes/show.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/recipes/show.html.erb:18: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/recipes/show.html.erb:20: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:44:13 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (16.8ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<String:0x007ff4407a6020>):
+     5:   </p>
+     6:   <p>
+     7:   <li id="recipe_ingredients">
+     8:     <% @recipe.ingredients.each do |this| %>
+     9:     <ol><%= this %> </ol>
+    10:     <%end%>
+    11:   </li>
+  
+app/views/recipes/show.html.erb:8:in `_app_views_recipes_show_html_erb___3998422503863916437_70343516046120'
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:45:03 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 62ms (Views: 53.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:45:43 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 60ms (Views: 50.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:45:57 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/show.html.erb:9: syntax error, unexpected ',', expecting ')'
+...d=( @recipe.ingredients.split(,) );@output_buffer.safe_appen...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/show.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+/home/stormy/Desktop/PocketChef2/app/views/recipes/show.html.erb:21: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/recipes/show.html.erb:9: syntax error, unexpected ',', expecting ')'
+app/views/recipes/show.html.erb:19: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/recipes/show.html.erb:21: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:46:07 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 53ms (Views: 43.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 13:52:35 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:07:55 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 67ms (Views: 54.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:08:16 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 38.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:09:56 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:10:06 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 80ms (Views: 69.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:10:40 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 46ms (Views: 37.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:11:54 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<String:0x007ff4491a9308>):
+     7:   <li id="recipe_ingredients">
+     8: 
+     9:     <% @boop = @recipe.ingredients %>
+    10:     <% @boop.each do |woo| %>
+    11:       <ol>
+    12:         <li>
+    13:     <%= woo.split("") %>
+  
+app/views/recipes/show.html.erb:10:in `_app_views_recipes_show_html_erb___3998422503863916437_70343412847460'
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:12:16 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (70.0ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `split' for #<#<Class:0x007ff4426d3c68>:0x007ff4427ab528>):
+     6:   <p>
+     7:   <li id="recipe_ingredients">
+     8: 
+     9:     <% @boop = @recipe.ingredients,split() %>
+    10:     <% @boop.each do |woo| %>
+    11:       <ol>
+    12:         <li>
+  
+app/views/recipes/show.html.erb:9:in `_app_views_recipes_show_html_erb___3998422503863916437_70343532070920'
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:12:28 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 41ms (Views: 29.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:13:04 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 44ms (Views: 32.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:13:15 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:13:31 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 27.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:13:58 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 23.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:14:21 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 66ms (Views: 54.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:14:32 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 64ms (Views: 52.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:14:40 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 68ms (Views: 54.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:15:04 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 54ms (Views: 36.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:15:20 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Integer):
+     6:   <p>
+     7:   <li id="recipe_ingredients">
+     8: 
+     9:     <% @boop = @recipe.ingredients.split("","") %>
+    10:     <% @boop.each do |woo| %>
+    11:       <ol>
+    12:         <li>
+  
+app/views/recipes/show.html.erb:9:in `split'
+app/views/recipes/show.html.erb:9:in `_app_views_recipes_show_html_erb___3998422503863916437_70343523911280'
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:18:09 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (149.7ms)
+Completed 500 Internal Server Error in 164ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `scan' for #<#<Class:0x007ff4426d3c68>:0x007ff448ddb9b0>):
+     6:   <p>
+     7:   <li id="recipe_ingredients">
+     8: 
+     9:     <% @boop = @recipe.ingredients..scan(/"[^"]*"|'[^']*'|[^"'\s]+/) %>
+    10:     <% @boop.each do |woo| %>
+    11:       <ol>
+    12:         <li>
+  
+app/views/recipes/show.html.erb:9:in `_app_views_recipes_show_html_erb___3998422503863916437_70343580624220'
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:18:22 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 22.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:18:58 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 44ms (Views: 32.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:20:12 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:20:22 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/show.html.erb:9: target of repeat operator is not specified: /"[^"]*"|*|[^"'\s]+/):
+  
+app/views/recipes/show.html.erb:9: target of repeat operator is not specified: /"[^"]*"|*|[^"'\s]+/
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:20:39 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 21.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:24:40 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 84ms (Views: 71.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:27:53 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of Enumerator into String):
+    10:     <% @boop.each do |woo| %>
+    11: 
+    12:         <li>
+    13:     <%= eval woo.to_s.gsub('"', )%>
+    14:   </li>
+    15:     <% end %>
+    16:   </ol>
+  
+app/views/recipes/show.html.erb:13:in `eval'
+app/views/recipes/show.html.erb:13:in `block in _app_views_recipes_show_html_erb___3998422503863916437_70343587741540'
+app/views/recipes/show.html.erb:10:in `each'
+app/views/recipes/show.html.erb:10:in `_app_views_recipes_show_html_erb___3998422503863916437_70343587741540'
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:28:14 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 42ms (Views: 29.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-06-22 14:28:24 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 40ms (Views: 32.2ms | ActiveRecord: 1.0ms)
+
+
