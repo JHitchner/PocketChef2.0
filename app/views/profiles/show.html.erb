@@ -15,7 +15,7 @@
       <p id="profileTitle">
         <%= response["recipe"]["label"] %>
       </p>
-      <p "imageSize">
+      <p id="imageSize">
         <% @image = response["recipe"]["image"] %>
         <%= link_to image_tag(@image), {:controller => "recipes", :action => "index", :search => response["recipe"]["label"]} %>
       </p>

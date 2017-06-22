@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @recipes = Recipe.all
+    @recipes = Recipe.where(params[:user_id] == current_user.id)
     if(Profile.exists?(current_user.id))
       @profile = Profile.find(params[:id])
     else redirect_to new_profile_path
@@ -23,7 +23,7 @@ class ProfilesController < ApplicationController
     @apiPath = 'https://api.edamam.com/search?q='
     @appId = ENV['RECIPE_APP_ID']
     @apiKey = ENV['RECIPE_API_KEY']
-    @recipe_pref =  params[:preference]
+    @recipe_pref =  @profile.preference
     @response = HTTParty.get(@apiPath.to_s + "" + @recipe_pref.to_s  + ""+ @appId.to_s + "" + @apiKey.to_s + "&from=0" + "&to=5")
     @recipeResponse = JSON.parse(@response.body)
 

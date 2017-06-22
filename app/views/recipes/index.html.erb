@@ -15,9 +15,7 @@
           <% @image = response["recipe"]["image"] %>
           <%= image_tag(@image) %>
           <% @title = response["recipe"]["label"] %>
-          <% response["recipe"]["ingredients"].each do |text| %>
-            <% @ingredients = text["text"] %>
-          <%end%>
+          <% @ingredients=response["recipe"]["ingredientLines"] %>
           <p id="TitleRecipe">
             <%= f.text_field :title, value: @title %>
           </p>
