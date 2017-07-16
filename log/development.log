@@ -6535,3 +6535,1095 @@ Processing by ProfilesController#show as HTML
 Completed 200 OK in 672ms (Views: 41.3ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/profiles/1" for 127.0.0.1 at 2017-07-16 12:59:23 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered profiles/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 732ms (Views: 41.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2017-07-16 12:59:26 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 33ms (Views: 26.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2017-07-16 12:59:29 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.3ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:7: syntax error, unexpected ':', expecting ')'
+...nd=( f.text_area :ingredients :size => 50, :id => "ingredien...
+...                               ^):
+  
+app/views/recipes/edit.html.erb:7: syntax error, unexpected ':', expecting ')'
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2017-07-16 12:59:45 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+...( f.text_area :ingredients size: => 50, :id => "ingredientLi...
+...                               ^):
+  
+app/views/recipes/edit.html.erb:7: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2017-07-16 12:59:54 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:7: syntax error, unexpected =>
+...ext_area :ingredients, size: => 50, :id => "ingredientListEd...
+...                               ^):
+  
+app/views/recipes/edit.html.erb:7: syntax error, unexpected =>
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2017-07-16 12:59:58 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:7: syntax error, unexpected =>
+...ext_area :ingredients, size: => 50, :id => "ingredientListEd...
+...                               ^):
+  
+app/views/recipes/edit.html.erb:7: syntax error, unexpected =>
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2017-07-16 13:00:10 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 22.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2017-07-16 13:03:49 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 19.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2017-07-16 13:05:33 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2017-07-16 13:05:42 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 26.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2017-07-16 13:05:49 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 20.2ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/recipes/12" for 127.0.0.1 at 2017-07-16 13:09:29 -0400
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pQH/6l8c+LzwaSKNYRoiwsZajcGSKNQfncgEcbnhyxrsfYMDTcwhgPaAK9f5kWddZuxCSaZMovkZC92jMx95qQ==", "recipe"=>{"title"=>"Chicken Piccata", "ingredients"=>"[\"Two large chicken breasts\", \"¼ cup flour\", \"Salt and pepper\", \"2 tbsp. olive oil\", \"3 tbsp. butter\", \"3 tbsp. dry white wine\", \"3 tbsp. lemon juice\", \"2 tbsp. capers, rinsed and drained\", \"1 tbsp. parsley, chopped\"]"}, "commit"=>"Update List", "id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/profiles/1
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2017-07-16 13:09:29 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered profiles/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 725ms (Views: 30.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes?search=Pomegranate+Poached+Pears" for 127.0.0.1 at 2017-07-16 13:09:35 -0400
+Processing by RecipesController#index as HTML
+  Parameters: {"search"=>"Pomegranate Poached Pears"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering recipes/index.html.erb within layouts/application
+  Rendered recipes/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 330ms (Views: 36.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/recipes" for 127.0.0.1 at 2017-07-16 13:09:44 -0400
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kJ4JW1BrT9pfQlpcLb6IQ1HD1BwokhWCva/Tc063TOnZ4nWyQruW5lmrUwa1Nc3c8XUblBz2Y2Q5bAqhxEn+Wg==", "recipe"=>{"title"=>"Pomegranate Poached Pears", "ingredients"=>"[\"4 medium pear, bosc, ripe, firm\", \"1 1/2 cup(s) pomegranate juice\", \"1 cup(s) wine, dessert, such as muscatel or riesling\", \"2 tablespoon nuts, almonds, sliced\", \"1/2 cup(s) seeds, pomegranate, (from 1/2 large fruit)\", \"4 tablespoon sour cream, reduced-fat, or low-fat plain yogurt\", \"4 whole bay leaves, fresh or dried, for garnish\"]"}, "commit"=>"Make List"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "recipes" ("created_at", "updated_at", "title", "ingredients") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-07-16 17:09:44.555643"], ["updated_at", "2017-07-16 17:09:44.555643"], ["title", "Pomegranate Poached Pears"], ["ingredients", "[\"4 medium pear, bosc, ripe, firm\", \"1 1/2 cup(s) pomegranate juice\", \"1 cup(s) wine, dessert, such as muscatel or riesling\", \"2 tablespoon nuts, almonds, sliced\", \"1/2 cup(s) seeds, pomegranate, (from 1/2 large fruit)\", \"4 tablespoon sour cream, reduced-fat, or low-fat plain yogurt\", \"4 whole bay leaves, fresh or dried, for garnish\"]"]]
+  [1m[35m (393.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  [1m[33mUPDATE "recipes" SET "updated_at" = ?, "user_id" = ? WHERE "recipes"."id" = ?[0m  [["updated_at", "2017-07-16 17:09:44.961965"], ["user_id", 1], ["id", 21]]
+  [1m[35m (183.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/profiles/1
+Completed 302 Found in 604ms (ActiveRecord: 582.1ms)
+
+
+Started GET "/profiles/1" for 127.0.0.1 at 2017-07-16 13:09:45 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  Rendered profiles/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 703ms (Views: 30.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/21" for 127.0.0.1 at 2017-07-16 13:09:51 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/show.html.erb within layouts/application
+  Rendered recipes/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 20.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:09:54 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:12:39 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 21.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:14:52 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 33ms (Views: 25.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:15:31 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:27: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:29: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/recipes/edit.html.erb:27: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/recipes/edit.html.erb:29: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:15:48 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 29ms (Views: 21.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:16:26 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 33ms (Views: 25.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:17:07 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:17:24 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 25.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:17:56 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:17:58 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:18:29 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:14: syntax error, unexpected '<'
+..._area :ingredients, :value => <% @list.each do |list| @outpu...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:14: syntax error, unexpected keyword_do_block, expecting keyword_end
+...nts, :value => <% @list.each do |list| @output_buffer.safe_a...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:28: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/recipes/edit.html.erb:14: syntax error, unexpected '<'
+app/views/recipes/edit.html.erb:14: syntax error, unexpected keyword_do_block, expecting keyword_end
+app/views/recipes/edit.html.erb:28: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:19:19 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:17: syntax error, unexpected ',', expecting ')'
+       end, :cols => "20", :rows => "10"...
+           ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:17: syntax error, unexpected ',', expecting ')'
+       end, :cols => "20", :rows => "10", :id => "ingre...
+                          ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:17: syntax error, unexpected ',', expecting ')'
+..., :cols => "20", :rows => "10", :id => "ingredientListEdit")...
+...                               ^):
+  
+app/views/recipes/edit.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/recipes/edit.html.erb:17: syntax error, unexpected ',', expecting ')'
+app/views/recipes/edit.html.erb:17: syntax error, unexpected ',', expecting ')'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:19:45 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 36ms (Views: 25.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:20:17 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: unknown regexp option - l
+unmatched close parenthesis: /)
+
+    end), :cols => "20", :rows => "10", :id => "ingredientListEdit");@output_buffer.safe_append='
+        </
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:19: syntax error, unexpected '<'
+      </li>
+       ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:20: unknown regexp option - p
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:23: unterminated regexp meets end of file
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/recipes/edit.html.erb:18: unknown regexp option - l
+app/views/recipes/edit.html.erb:19: syntax error, unexpected '<'
+app/views/recipes/edit.html.erb:20: unknown regexp option - p
+app/views/recipes/edit.html.erb:23: unterminated regexp meets end of file
+app/views/recipes/edit.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:20:24 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: unknown regexp option - l
+unmatched close parenthesis: /)
+
+    end), :cols => "20", :rows => "10", :id => "ingredientListEdit");@output_buffer.safe_append='
+        </
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:19: syntax error, unexpected '<'
+      </li>
+       ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:20: unknown regexp option - p
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:23: unterminated regexp meets end of file
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/recipes/edit.html.erb:18: unknown regexp option - l
+app/views/recipes/edit.html.erb:19: syntax error, unexpected '<'
+app/views/recipes/edit.html.erb:20: unknown regexp option - p
+app/views/recipes/edit.html.erb:23: unterminated regexp meets end of file
+app/views/recipes/edit.html.erb:23: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:20:35 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 35ms (Views: 25.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:20:58 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 24ms (Views: 18.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:21:41 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 21.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:22:35 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.8ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:32: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/recipes/edit.html.erb:30: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/recipes/edit.html.erb:32: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:22:48 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:23:04 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 28ms (Views: 20.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:23:44 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 34ms (Views: 25.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:24:04 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.9ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:23: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...edients, :value => formatThis :cols => "20", :rows => "10", ...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:23: syntax error, unexpected ',', expecting ')'
+...ue => formatThis :cols => "20", :rows => "10", :id => "ingre...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:23: syntax error, unexpected ',', expecting ')'
+...s :cols => "20", :rows => "10", :id => "ingredientListEdit")...
+...                               ^):
+  
+app/views/recipes/edit.html.erb:23: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/views/recipes/edit.html.erb:23: syntax error, unexpected ',', expecting ')'
+app/views/recipes/edit.html.erb:23: syntax error, unexpected ',', expecting ')'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:24:16 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 25.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:24:44 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (58.2ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `{:ingredients=>["\"4 medium pear, bosc, ripe, firm\"", "\"1 1/2 cup(s) pomegranate juice\"", "\"1 cup(s) wine, dessert, such as muscatel or riesling\"", "\"2 tablespoon nuts, almonds, sliced\"", "\"1/2 cup(s) seeds, pomegranate, (from 1/2 large fruit)\"", "\"4 tablespoon sour cream, reduced-fat, or low-fat plain yogurt\"", "\"4 whole bay leaves, fresh or dried, for garnish\""], :cols=>"20", :rows=>"10", :id=>"ingredientListEdit"}' for #<Recipe:0x007f57bc5d1c70>):
+    20:     <p id="editTextArea">
+    21:       <li>
+    22:         <ol>
+    23:       <%= f.text_area :ingredients => formatThis, :cols => "20", :rows => "10", :id => "ingredientListEdit"%>
+    24:         </ol>
+    25:       </li>
+    26:     </p>
+  
+app/views/recipes/edit.html.erb:23:in `block in _app_views_recipes_edit_html_erb__1735727902294764723_70007399548160'
+app/views/recipes/edit.html.erb:16:in `_app_views_recipes_edit_html_erb__1735727902294764723_70007399548160'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:25:21 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 21.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:25:40 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 34ms (Views: 26.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:26:20 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 25.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:26:55 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 32ms (Views: 24.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:27:29 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.0ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: syntax error, unexpected =>
+...xt_area :ingredients, value: => formatThis(), :cols => "20",...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: syntax error, unexpected ',', expecting ')'
+...dients, value: => formatThis(), :cols => "20", :rows => "10"...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: syntax error, unexpected ',', expecting ')'
+...=> formatThis(), :cols => "20", :rows => "10", :id => "ingre...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: syntax error, unexpected ',', expecting ')'
+..., :cols => "20", :rows => "10", :id => "ingredientListEdit")...
+...                               ^):
+  
+app/views/recipes/edit.html.erb:18: syntax error, unexpected =>
+app/views/recipes/edit.html.erb:18: syntax error, unexpected ',', expecting ')'
+app/views/recipes/edit.html.erb:18: syntax error, unexpected ',', expecting ')'
+app/views/recipes/edit.html.erb:18: syntax error, unexpected ',', expecting ')'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:33:55 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: syntax error, unexpected '^', expecting ']'
+...:ingredients, :pattern => "/"[^"]*"|'[^']*'|[^"'\s\W]+/", :c...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: syntax error, unexpected ']', expecting ')'
+...ts, :pattern => "/"[^"]*"|'[^']*'|[^"'\s\W]+/", :cols => "20...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: syntax error, unexpected $undefined, expecting ')'
+...tern => "/"[^"]*"|'[^']*'|[^"'\s\W]+/", :cols => "20", :rows...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:19: unknown regexp option - p
+unmatched close parenthesis: /", :cols => "20", :rows => "10", :id => "ingredientListEdit");@output_buffer.safe_append='
+    </
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:22: unterminated regexp meets end of file
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:22: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/recipes/edit.html.erb:18: syntax error, unexpected '^', expecting ']'
+app/views/recipes/edit.html.erb:18: syntax error, unexpected ']', expecting ')'
+app/views/recipes/edit.html.erb:18: syntax error, unexpected $undefined, expecting ')'
+app/views/recipes/edit.html.erb:19: unknown regexp option - p
+app/views/recipes/edit.html.erb:22: unterminated regexp meets end of file
+app/views/recipes/edit.html.erb:22: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:34:27 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: syntax error, unexpected '^', expecting ']'
+...ea :ingredients, pattern: "/"[^"]*"|'[^']*'|[^"'\s\W]+/", :c...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: syntax error, unexpected ']', expecting ')'
+...ients, pattern: "/"[^"]*"|'[^']*'|[^"'\s\W]+/", :cols => "20...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:18: syntax error, unexpected $undefined, expecting ')'
+...attern: "/"[^"]*"|'[^']*'|[^"'\s\W]+/", :cols => "20", :rows...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:19: unknown regexp option - p
+unmatched close parenthesis: /", :cols => "20", :rows => "10", :id => "ingredientListEdit");@output_buffer.safe_append='
+    </
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:22: unterminated regexp meets end of file
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:22: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/recipes/edit.html.erb:18: syntax error, unexpected '^', expecting ']'
+app/views/recipes/edit.html.erb:18: syntax error, unexpected ']', expecting ')'
+app/views/recipes/edit.html.erb:18: syntax error, unexpected $undefined, expecting ')'
+app/views/recipes/edit.html.erb:19: unknown regexp option - p
+app/views/recipes/edit.html.erb:22: unterminated regexp meets end of file
+app/views/recipes/edit.html.erb:22: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:34:43 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 24.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:35:33 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 20.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:36:42 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (66.7ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `gsub' for #<#<Class:0x00000003ea4400>:0x007f57ba5ccba0>):
+    16:       <%= f.text_field :title %>
+    17:     </p>
+    18:     <p id="editTextArea">
+    19:       <%= f.text_area :ingredients => gsub('""', ) , :cols => "20", :rows => "10", :id => "ingredientListEdit"%>
+    20:     </p>
+    21:     <%= f.submit "Update List", :id => "recipeSubmitEdit" %>
+    22:   <% end%>
+  
+app/views/recipes/edit.html.erb:19:in `block in _app_views_recipes_edit_html_erb__1735727902294764723_70007382764220'
+app/views/recipes/edit.html.erb:14:in `_app_views_recipes_edit_html_erb__1735727902294764723_70007382764220'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:36:58 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `gsub' for :ingredients:Symbol):
+    16:       <%= f.text_field :title %>
+    17:     </p>
+    18:     <p id="editTextArea">
+    19:       <%= f.text_area :ingredients.gsub('""', ) , :cols => "20", :rows => "10", :id => "ingredientListEdit"%>
+    20:     </p>
+    21:     <%= f.submit "Update List", :id => "recipeSubmitEdit" %>
+    22:   <% end%>
+  
+app/views/recipes/edit.html.erb:19:in `block in _app_views_recipes_edit_html_erb__1735727902294764723_70007231187040'
+app/views/recipes/edit.html.erb:14:in `_app_views_recipes_edit_html_erb__1735727902294764723_70007231187040'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:37:13 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `#<Enumerator:0x00000004366718>' for #<Recipe:0x000000044cb6d0>):
+    16:       <%= f.text_field :title %>
+    17:     </p>
+    18:     <p id="editTextArea">
+    19:       <%= f.text_area :ingredients.to_s.gsub('""', ) , :cols => "20", :rows => "10", :id => "ingredientListEdit"%>
+    20:     </p>
+    21:     <%= f.submit "Update List", :id => "recipeSubmitEdit" %>
+    22:   <% end%>
+  
+app/views/recipes/edit.html.erb:19:in `block in _app_views_recipes_edit_html_erb__1735727902294764723_36005140'
+app/views/recipes/edit.html.erb:14:in `_app_views_recipes_edit_html_erb__1735727902294764723_36005140'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:39:05 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 39ms (Views: 30.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:39:23 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 23.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:39:51 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<String:0x007f57bc6f4210>):
+    17:     </p>
+    18:     <p id="editTextArea">
+    19:       <% @list = @recipe.ingredients%>
+    20:       <% @list.each do |list| %>
+    21:         <!--Removed those double quotes -->
+    22:       <% list.to_s.gsub('"', )%>
+    23:       <% end %>
+  
+app/views/recipes/edit.html.erb:20:in `block in _app_views_recipes_edit_html_erb__1735727902294764723_70007397210740'
+app/views/recipes/edit.html.erb:14:in `_app_views_recipes_edit_html_erb__1735727902294764723_70007397210740'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:41:10 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:41:29 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.1ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:19: syntax error, unexpected ','
+...ts, :value => def formatThis(), :cols => "20", :rows => "10"...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:19: syntax error, unexpected ',', expecting keyword_end
+...ef formatThis(), :cols => "20", :rows => "10", :id => "ingre...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:19: syntax error, unexpected ',', expecting keyword_end
+..., :cols => "20", :rows => "10", :id => "ingredientListEdit")...
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:19: syntax error, unexpected ')', expecting keyword_end
+...", :id => "ingredientListEdit");@output_buffer.safe_append='
+...                               ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:27: syntax error, unexpected keyword_ensure, expecting ')'
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:29: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/recipes/edit.html.erb:19: syntax error, unexpected ','
+app/views/recipes/edit.html.erb:19: syntax error, unexpected ',', expecting keyword_end
+app/views/recipes/edit.html.erb:19: syntax error, unexpected ',', expecting keyword_end
+app/views/recipes/edit.html.erb:19: syntax error, unexpected ')', expecting keyword_end
+app/views/recipes/edit.html.erb:27: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/recipes/edit.html.erb:29: syntax error, unexpected keyword_end, expecting ')'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:41:38 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 36ms (Views: 28.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:42:18 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:43:11 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:43:45 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `gsub' for #<Array:0x007f57ba364d18>):
+    16:       <%= f.text_field :title %>
+    17:     </p>
+    18:     <p id="editTextArea">
+    19:       <%= f.text_area :ingredients, :value => @list.gsub('"','' ), :cols => "20", :rows => "10", :id => "ingredientListEdit"%>
+    20:     </p>
+    21:     <%= f.submit "Update List", :id => "recipeSubmitEdit" %>
+    22:   <% end%>
+  
+app/views/recipes/edit.html.erb:19:in `block in _app_views_recipes_edit_html_erb__1735727902294764723_70007232283260'
+app/views/recipes/edit.html.erb:14:in `_app_views_recipes_edit_html_erb__1735727902294764723_70007232283260'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:43:59 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 31ms (Views: 24.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:44:21 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `scan' for #<Array:0x007f57ba5cfc60>):
+    16:       <%= f.text_field :title %>
+    17:     </p>
+    18:     <p id="editTextArea">
+    19:       <%= f.text_area :ingredients, :value => @list.scan(/"[^"]*"|'[^']*'|[^"'\s\W]+/), :cols => "20", :rows => "10", :id => "ingredientListEdit"%>
+    20:     </p>
+    21:     <%= f.submit "Update List", :id => "recipeSubmitEdit" %>
+    22:   <% end%>
+  
+app/views/recipes/edit.html.erb:19:in `block in _app_views_recipes_edit_html_erb__1735727902294764723_70007367026020'
+app/views/recipes/edit.html.erb:14:in `_app_views_recipes_edit_html_erb__1735727902294764723_70007367026020'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:44:32 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 22.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:44:48 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `scan' for #<Array:0x007f57a8886560>):
+    16:       <%= f.text_field :title %>
+    17:     </p>
+    18:     <p id="editTextArea">
+    19:       <%= f.text_area :ingredients, :value => @list.scan(/"[^"]*"|'[^']*'|[^"'\s\W]+/).to_s, :cols => "20", :rows => "10", :id => "ingredientListEdit"%>
+    20:     </p>
+    21:     <%= f.submit "Update List", :id => "recipeSubmitEdit" %>
+    22:   <% end%>
+  
+app/views/recipes/edit.html.erb:19:in `block in _app_views_recipes_edit_html_erb__1735727902294764723_70007233261880'
+app/views/recipes/edit.html.erb:14:in `_app_views_recipes_edit_html_erb__1735727902294764723_70007233261880'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:45:05 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:47:19 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 32ms (Views: 24.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:47:40 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 32ms (Views: 23.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:47:58 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 28.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:52:20 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 28.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:53:11 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 27ms (Views: 20.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:53:31 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:20: unknown regexp option - p
+unmatched close parenthesis: /"|\[|\]\/, ' ' ), :cols => "20", :rows => "10", :id => "ingredientListEdit");@output_buffer.safe_append='
+    </
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+'.freeze;   end
+ ^
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:24: unknown regexp options - dv
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:25: unterminated string meets end of file
+/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:25: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/recipes/edit.html.erb:20: unknown regexp option - p
+app/views/recipes/edit.html.erb:22: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/recipes/edit.html.erb:24: unknown regexp options - dv
+app/views/recipes/edit.html.erb:25: unterminated string meets end of file
+app/views/recipes/edit.html.erb:25: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:54:10 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/stormy/Desktop/PocketChef2/app/views/recipes/edit.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/recipes/edit.html.erb:24: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:54:23 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes/21/edit" for 127.0.0.1 at 2017-07-16 13:54:41 -0400
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering recipes/edit.html.erb within layouts/application
+  Rendered recipes/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 22.9ms | ActiveRecord: 1.0ms)
+
+
