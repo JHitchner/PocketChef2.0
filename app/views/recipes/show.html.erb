@@ -4,19 +4,23 @@
     <%= @recipe.title%>
   </p>
   <p>
-  <li id="recipe_ingredients">
+  <p id="recipe_ingredients">
     <ol>
-    <% @boop = @recipe.ingredients.scan(/"[^"]*"|'[^']*'|[^"'\s\W]+/) %>
-    <% @boop.each do |woo| %>
-
-        <li>
-    <%=  woo.to_s.gsub('"','' )%>
-  </li>
+      <!--Used a regex expression to remove the empty spaces/non characters and split by quotes  -->
+    <% @list = @recipe.ingredients.scan(/"[^"]*"|'[^']*'|[^"'\s\W]+/) %>
+    <% @list.each do |list| %>
+    <li id="formatList">
+      <!--Removed those double quotes -->
+    <%=  list.to_s.gsub('"','' )%>
+   </li>
     <% end %>
   </ol>
-  </li>
+</p>
   </p>
 </div>
 <p id="showLinks">
   <%=link_to "Delete List", recipe_path(@recipe.id),:method => :delete, :id => "editList"%>
+</p>
+<p id="editList">
+  <%=link_to "Edit List", edit_recipe_path(@recipe.id)%>
 </p>

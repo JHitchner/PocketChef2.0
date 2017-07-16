@@ -1,6 +1,6 @@
 
 <div class="edit_form">
-  <%= form_for(:recipe, url: profile_path(current_user), :class => "form") do |f| %>
+  <%= form_for(@recipe, :class => "form") do |f| %>
     <p id="TitleRecipeEdit">
       <%= f.text_field :title %>
     </p>

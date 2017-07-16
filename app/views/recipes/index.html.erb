@@ -13,18 +13,22 @@
       <% @recipeResponse["hits"].each do |response| %>
         <span id="imageResponseRecipe">
           <% @image = response["recipe"]["image"] %>
-          <%= image_tag(@image) %>
+          <%= image_tag(@image) %>pin
           <% @title = response["recipe"]["label"] %>
           <% @ingredients=response["recipe"]["ingredientLines"] %>
+          <% @poo =@ingredients %>
+          <% @poo.each do |poo| %>
+          <% poo.to_s.gsub(/"[^"]*"|'[^']*'|[^"'\s\W]+/,'')%>
+          <% end %>
           <p id="TitleRecipe">
             <%= f.text_field :title, value: @title %>
           </p>
           <p >
-            <%= f.text_area :ingredients, value: @ingredients, :id => "ingredientList" %>
+            <%= f.text_area :ingredients, value: @poo , :id => "ingredientList" %>
           </p>
               <%= f.submit "Make List", :class => "recipeSubmit" %>
         </span>
-        <% end%>
+        <%end%>
       <%end%>
     </span>
 </div>
